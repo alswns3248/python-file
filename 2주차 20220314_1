@@ -1,0 +1,49 @@
+
+2022_03_14
+2주차 수업
+'''
+'''
+print('hello');
+print("hello");
+
+print("he's name is 철수")
+print('he said "I am OK!" ')
+
+print ("He said \"I am OK!\" ")
+'''
+print("a" * 10)
+
+print('He said "python is Easy"')
+print("34256 곱하기 2365는", 34256 * 2365, "입니다.")
+'''
+
+print("A")
+print("B")
+'''
+
+#\n 은 new line을 의미
+print("A\nBC\nDEF")
+'''
+
+'''
+#========문자열 슬라이싱(slice)======
+#print("Hello"[0])
+#print("Hello"[1])
+print("Hello"[-1]) #뒤에서 첫글자
+print("Hello"[0:3]) #0<=범위 <3 까지
+'''
+
+'''
+
+a=input() #a는 입력된 숫자를 가리킴
+print(a) #a가 가리키는 것을 출력
+
+'''
+'''
+
+b="2022년 3월 14일"
+print(b)
+
+'''
+'''
+b=input("오늘 날짜 입력:");
