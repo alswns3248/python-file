@@ -70,3 +70,15 @@ while n <= a*a:
 3 7 11 15
 4 8 12 16
 '''
+
+a = int(input("숫자 입력:"))
+n = 0
+b = 1
+
+while b <= a:
+    while n < a:
+        print(b+a*n, end = ' ')
+        n+=1
+    print()
+    b+=1
+    n=0
