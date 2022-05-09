@@ -1,0 +1,136 @@
+'''
+BD = ['A', 'K', '__', 'M', 'L'] # __는 빈자리를 의미
+
+r=2 #빈자리의 번호가 현재 2번 임
+
+print(BD)
+while(BD != ['A', 'K', 'M', 'L', '__']):
+    k = input('a 또는 d를 입력 : ')
+
+    if k == 'a' and r > 0 :
+        BD[r], BD[r-1] = BD[r-1], BD[r] #__의 왼쪽 값과 서로 바꾸기
+
+        print(BD)
+
+    elif k == 'd' and r < 4:
+        BD[r], BD[r+1] = BD[r+1], BD[r] #__의 오른쪽 값과 서로 바꾸기
+        print(BD)
+'''
+
+
+
+'''
+import random
+import os
+
+
+numbers = []
+cnt_total = 0
+cnt_strike = 0
+
+rand_num = str(random.randint(0, 9))
+
+
+for i in range(3):
+
+    while rand_num in numbers:
+        rand_num = str(random.randint(0, 9))
+    numbers.append(rand_num)
+
+os.system("cls")
+
+print("=" * 50)
+print("야구 게임을 시작합니다!")
+print("=" * 50)
+
+while(cnt_strike < 3):
+
+    cnt_strike = 0    
+    cnt_ball = 0
+
+    num = str(input("숫자 3자리를 입력하세요.> "))
+    
+    if len(num) == 3:
+        for i in range(0, 3):
+            for j in range(0, 3):
+                if num[i] == numbers[j] and i == j:
+                    cnt_strike += 1
+                elif num[i] == numbers[j] and i != j:
+                    cnt_ball += 1
+        if cnt_strike == 0 and cnt_ball == 0:
+            print("아웃!!")
+        else:
+            output = ""
+            if cnt_strike > 0:
+                output += "{} 스트라이크".format(cnt_strike)
+            if cnt_ball > 0:
+                output += " {} 볼".format(cnt_ball)
+            print(output.strip())
+        cnt_total += 1
+
+
+print("*" * 50)
+print("{} 회 만에 성공".format(cnt_total))
+'''
+
+
+
+
+
+#랜덤 모듈을 불러온다.
+
+#비어있는 리스트를 만든다.
+
+#1~9사이의 임의의 숫자를 리스트에 넣는다.
+
+#리스트안에 숫자 객수가 3개보다 작다면 반복한다.
+
+
+#임의의 숫자 하나를 변수가 가리키게 한다.
+
+
+
+        # 임의의 숫자 하나를 변수 r이 가리키게 한다.
+
+
+        #만약 r이 가리키는 숫자가 리스트안에 없다면
+           #그 숫자를 추가시킨다.
+
+
+
+
+# 숫자 3개를 입력받아 흰트를 출력한다.  <== 코드로 작성
+
+
+
+
+
+
+import random
+
+a=list(range(1,101)) #1~100사이의 숫자를 리스트로 만들기
+
+
+random.shuffle(a) #a리스트 섞기
+
+
+a = a[0:3]   #인덱스 0,1,2번만 a리스트로 하기
+s,b,o=0,0,0
+
+
+
+n1,n2,n3 = input('숫자 3개 입력(띄어쓰기구분)' ).split(' ')
+n1 = int(n1)
+n2 = int(n2)
+n3 = int(n3)
+
+print(n1, n2, n3)
+
+
+if n1 in a:
+    if n1==a[0]:
+        s+=1
+    else:
+        b+=1
+else:
+    b+=1
